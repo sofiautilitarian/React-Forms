@@ -1,9 +1,11 @@
-import React, { FormEvent, useRef } from "react";
+import React, { FormEvent, useRef, useState } from "react";
 
 const Form = () => {
 
   const address = useRef<HTMLInputElement>(null);
-  const IP_Value ={ip: ''};
+  const [IP_Value, setIP_Value] = useState({
+    ip : ''
+});
 
   
   
@@ -24,6 +26,7 @@ const Form = () => {
 
         <input
           id="name"
+          ref = {address}
           type="text"
           pattern="^(25[0-5]|2[0-4][0-9]|1?[0-9]{1,2})(\.(25[0-5]|2[0-4][0-9]|1?[0-9]{1,2})){3}$"
           className="form-control"
