@@ -1,8 +1,16 @@
-import React, { FormEvent } from "react";
+import React, { FormEvent, useRef } from "react";
 
 const Form = () => {
+
+  const address = useRef<HTMLInputElement>(null);
+  const IP_Value ={ip: ''};
+
+  
+  
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
+    if (address.current !== null)
+      IP_Value.ip = address.current.value;
     console.log("Submitted");
   }
   return (
