@@ -1,7 +1,9 @@
 import React, { FormEvent, useRef, useState } from "react";
-import {useForm} from 'react-hook-form';
+import { useForm } from "react-hook-form";
 
-const Form = () => {
+const ModuleSix = () => {
+  const Form = useForm();
+  console.log(Form);
   const address = useRef<HTMLInputElement>(null);
   const [IP_Value, setIP_Value] = useState({
     ip: "",
@@ -23,7 +25,7 @@ const Form = () => {
           onChange={(event) =>
             setIP_Value({ ...IP_Value, ip: event.target.value })
           }
-          value = {IP_Value.ip}
+          value={IP_Value.ip}
           id="name"
           ref={address}
           type="text"
@@ -38,4 +40,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default ModuleSix;
