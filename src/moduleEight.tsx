@@ -12,7 +12,7 @@ const schema = z.object({
 
 type formdata = z.infer<typeof schema>;
 
-const ModuleSix = () => {
+const moduleEight = () => {
   const Form = useForm();
   console.log(Form);
   const address = useRef<HTMLInputElement>(null);
@@ -54,4 +54,4 @@ const ModuleSix = () => {
   );
 };
 
-export default ModuleSix;
+export default moduleEight;
